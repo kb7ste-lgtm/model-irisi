@@ -7,7 +7,7 @@ import os
 st.set_page_config(page_title="Iris Prediction", layout="wide")
 
 # --- 2. CHARGEMENT DU MODÈLE (PICKLE) ---
-MODEL_PATH = r"C:\Users\ASUS\Desktop\HASSANIA\10_Labs_deploiement\Streamlit\app build\modeliris6.pkl"
+MODEL_PATH = r"modeliris6.pkl"
 
 @st.cache_resource
 def load_model():
