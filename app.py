@@ -7,7 +7,7 @@ import os
 st.set_page_config(page_title="Iris Prediction", layout="wide")
 
 # --- 2. CHARGEMENT DU MODÈLE (PICKLE) ---
-MODEL_PATH ="modeliris6.pkl"
+MODEL_PATH =60
 
 @st.cache_resource
 def load_model():
@@ -21,7 +21,8 @@ def load_model():
         st.error(f"Erreur chargement pickle : {e}")
         return None
 
-model = load_model()
+# model = load_model()
+model = pickle.load(open("modeliris6.pkl",'rb'))
 
 # --- 3. SIDEBAR (Image + Sliders) ---
 with st.sidebar:
